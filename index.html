@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Olivier Busolini</title>
+<meta name="description" content="Olivier Busolini: newsletter, consulting, writing, speaking and media on cybersecurity and digital risk.">
+<meta property="og:title" content="Olivier Busolini">
+<meta property="og:description" content="Newsletter, consulting, writing, speaking and media on cybersecurity and digital risk.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="king.jpg">
+<style>:root{color-scheme:light}html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: a document-style page. Section titles sit in a left margin column, content runs in the body column; both stack on a phone. */
+:root {
+  --bg: #FBFCFD;
+  --ink: #1A1D21;
+  --muted: #5A6470;
+  --rule: #D5DCE3;
+  --blue: #0B2E52;
+  --teal: #2B7A87;
+  --tint: #E8F2F4;
+  --link: #0B2E52;
+  --on-blue: #FFFFFF;
+  --on-blue-muted: #B9C7D6;
+  --font-head: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B141F;
+    --ink: #E6EBF0;
+    --muted: #9AA7B5;
+    --rule: #26384A;
+    --blue: #0B2E52;
+    --teal: #6FB5C0;
+    --tint: #12222F;
+    --link: #8DB8E8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B141F;
+  --ink: #E6EBF0;
+  --muted: #9AA7B5;
+  --rule: #26384A;
+  --blue: #0B2E52;
+  --teal: #6FB5C0;
+  --tint: #12222F;
+  --link: #8DB8E8;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  padding-inline: 0;
+}
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+
+/* Hero: the king photograph fades into deep blue; the name sits on that blue */
+.hero { background: var(--blue); color: var(--on-blue); }
+.hero-img { display: block; width: 100%; height: clamp(170px, 34vw, 400px); object-fit: cover; object-position: 78% 40%; }
+.hero-text { max-width: 1080px; margin-inline: auto; padding: 8px 20px 44px; display: grid; gap: 14px; }
+.eyebrow { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-blue-muted); margin: 0; }
+.hero h1 { font-family: var(--font-head); font-weight: 500; font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: 1.02; margin: 0; text-wrap: balance; }
+.hero .lede { font-size: 1.2rem; max-width: 36em; margin: 0; color: var(--on-blue); }
+.hero .role { font-size: 0.95rem; max-width: 44em; margin: 0; color: var(--on-blue-muted); }
+.hero nav { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 6px; }
+.hero nav a { color: var(--on-blue); font-size: 0.95rem; }
+.hero blockquote { font-family: var(--font-head); font-style: italic; font-weight: 500; font-size: 1.3rem; line-height: 1.35; margin: 10px 0 0; max-width: 32em; color: var(--on-blue); border-left: 1px solid var(--on-blue-muted); padding-left: 16px; }
+
+main { max-width: 1080px; margin-inline: auto; padding: 8px 20px 24px; }
+section { display: grid; grid-template-columns: minmax(0, 190px) minmax(0, 1fr); gap: 12px 40px; padding-block: 44px; border-top: 1px solid var(--rule); }
+main > section:first-child { border-top: 0; }
+h2 { font-family: var(--font-head); font-weight: 500; font-size: 1.9rem; line-height: 1.1; margin: 0; text-wrap: balance; }
+.margin-note { color: var(--muted); font-size: 0.92rem; margin: 8px 0 0; }
+.body { min-width: 0; }
+.body > p:first-child { margin-top: 0; }
+p { margin: 0 0 1em; max-width: 40em; }
+
+.btn { display: inline-block; font-weight: 600; font-size: 0.98rem; background: var(--blue); color: #fff; padding: 11px 18px; border-radius: 2px; text-decoration: none; border: 1px solid var(--blue); }
+.btn:hover { background: var(--teal); border-color: var(--teal); }
+.btn.ghost { background: transparent; color: var(--link); border-color: var(--rule); }
+.btn.ghost:hover { border-color: var(--teal); color: var(--link); background: transparent; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px; }
+.card { border: 1px solid var(--rule); border-radius: 2px; padding: 22px 22px 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.cards.two { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.card h3 { font-family: var(--font-head); font-weight: 600; font-size: 1.5rem; line-height: 1.12; margin: 0; }
+.card .tag { font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin: 0; }
+.card p { font-size: 0.98rem; margin: 0; }
+.card .facts { color: var(--muted); font-size: 0.9rem; }
+.facts-list { margin: 4px 0 0; padding-left: 1.1em; font-size: 0.95rem; display: grid; gap: 6px; }
+.card .dl { margin-top: auto; padding-top: 8px; font-weight: 600; font-size: 0.95rem; }
+
+.rows { list-style: none; margin: 0; padding: 0; }
+.rows li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 4px 22px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.rows li:first-child { padding-top: 0; }
+.rows .when { color: var(--muted); font-size: 0.92rem; font-variant-numeric: tabular-nums; padding-top: 2px; }
+.rows .what { min-width: 0; }
+.rows .what strong { font-weight: 600; }
+.rows .where { display: block; color: var(--muted); font-size: 0.93rem; }
+h3.group { font-family: var(--font-head); font-weight: 600; font-size: 1.3rem; margin: 34px 0 14px; }
+h3.group:first-child { margin-top: 0; }
+
+.contact-line { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; }
+.addr { font-family: var(--font-head); font-size: 1.8rem; font-weight: 500; user-select: all; overflow-wrap: anywhere; }
+.copy { font: inherit; font-size: 0.9rem; font-weight: 600; background: transparent; color: var(--link); border: 1px solid var(--rule); border-radius: 2px; padding: 7px 14px; cursor: pointer; }
+.copy:hover { border-color: var(--teal); }
+
+footer { max-width: 1080px; margin-inline: auto; padding: 26px 20px 48px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.88rem; display: grid; gap: 4px; }
+footer p { margin: 0; max-width: none; }
+
+@media (max-width: 760px) {
+  section { grid-template-columns: minmax(0, 1fr); padding-block: 34px; }
+  .rows li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .hero-text { padding-bottom: 36px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn, .copy { transition: background-color .15s, border-color .15s; }
+}
+</style>
+
+</head>
+<body>
+<header class="hero">
+  <img class="hero-img" src="king.jpg" alt="A white chess king standing on a chessboard against a dark background">
+  <div class="hero-text">
+    <p class="eyebrow">Independent work</p>
+    <h1>Olivier Busolini</h1>
+    <p class="lede">I write, speak and advise on how organisations build trust in a digital world.</p>
+    <p class="role">Global Head of Information Security (CISO) at a bank in the Middle East. Twenty-five years in cybersecurity leadership. This page covers my work beyond that role. The views are my own.</p>
+    <nav aria-label="Sections">
+      <a href="#newsletter">Newsletter</a>
+      <a href="#consulting">Consulting</a>
+      <a href="#writing">Writing</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#media">Media</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <blockquote>The future is digital, and its foundation is trust. Security is the precursor of trust.</blockquote>
+  </div>
+</header>
+
+<main>
+
+<section id="newsletter">
+  <div>
+    <h2>Newsletter</h2>
+    <p class="margin-note">Weekly</p>
+  </div>
+  <div class="body">
+    <h3 class="group">Infosec and AI risk watch</h3>
+    <p>A weekly brief on cyber and information risk for security and risk leaders, with the Gulf first. Each item is checked against its primary source before it goes out, and each ends with my own view.</p>
+    <p><a class="btn" href="https://buttondown.com/busolini" target="_blank" rel="noopener">Subscribe on Buttondown</a>&nbsp; <a class="btn ghost" href="https://buttondown.com/busolini" target="_blank" rel="noopener">Read past issues</a></p>
+  </div>
+</section>
+
+<section id="consulting">
+  <div>
+    <h2>Consulting</h2>
+    <p class="margin-note">Three offers with a sheet to download, then advisory work for startups and boards. Terms are discussed in a first conversation.</p>
+  </div>
+  <div class="body">
+    <div class="cards">
+      <article class="card">
+        <p class="tag">For CISOs</p>
+        <h3>CISO masterclass programme</h3>
+        <p>Two full days, three to six months apart. The first, 100 Days to Credibility, secures the mandate. The second, Building Your Operating Model, designs the function that uses it and ends with a written twelve-month build sequence.</p>
+        <p class="facts">Each day runs 09:00 to 16:30, in person, for up to thirty participants. Participants keep ten documents across the two days. Day one was piloted in September 2026.</p>
+        <a class="dl" href="ciso-masterclass-programme.pdf" target="_blank" rel="noopener">Programme prospectus (PDF)</a>
+      </article>
+      <article class="card">
+        <p class="tag">Digital assets</p>
+        <h3>Digital asset risk assessment</h3>
+        <p>For firms and family offices that hold digital assets. An assessment of how the assets are actually run: who can move them, what an approver can verify on the device in front of them, how holdings reconcile to the chain, and what happens on death, incapacity or dispute.</p>
+        <p class="facts">You receive a rated risk register, a 30, 60 and 90-day roadmap, and an immediate attention notice if something cannot wait.</p>
+        <a class="dl" href="dra-one-page.pdf" target="_blank" rel="noopener">One-page sheet (PDF)</a>
+      </article>
+      <article class="card">
+        <p class="tag">Executives and families</p>
+        <h3>VIP digital life protection</h3>
+        <p>Attacks on prominent people increasingly reach them through their family, their staff and their devices. The assessment treats each person around the principal at their own tier, and starts with the people and accounts that can move money or recover an account on the principal's word.</p>
+        <p class="facts">You receive a report for the principal and one for each person, a 30, 60 and 90-day roadmap, and step-by-step guides the family keeps.</p>
+        <a class="dl" href="vipdlp-one-page.pdf" target="_blank" rel="noopener">One-page sheet (PDF)</a>
+      </article>
+    </div>
+    <h3 class="group">Advisory</h3>
+    <div class="cards two">
+      <article class="card">
+        <p class="tag">Founders</p>
+        <h3>Startup advisory</h3>
+        <p>Strategic advice and mentoring for early-stage companies in cybersecurity, identity and digital trust.</p>
+        <ul class="facts-list">
+          <li>Strategic advisor to an early-stage identity and digital trust venture in Switzerland, since 2022.</li>
+          <li>Strategic advisor to a cybersecurity technology company in the UAE, since 2023.</li>
+          <li>Mentor, Tech4Trust and Trust Valley start-up accelerator, Switzerland, 2021 to 2023.</li>
+          <li>Jury member, GISEC North Star start-up competition, Dubai, 2025.</li>
+          <li>CISO mentor, CESIN, the French CISO association, since 2021.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <p class="tag">Boards</p>
+        <h3>Board advisory and membership</h3>
+        <p>I put technical risk in front of a board as a funding decision rather than a briefing. I am seeking Risk, Audit or Technology committee roles in banking, financial services, fintech or digital infrastructure, in Europe, Switzerland or the UAE.</p>
+        <ul class="facts-list">
+          <li>Functional reporting to the board risk committee of a Middle East bank, with direct access to the CEO.</li>
+          <li>Co-created that bank's AI and data governance committee and defined its AI risk management framework, mapped to the NIST AI RMF, covering more than 50 AI models.</li>
+          <li>Zero adverse audit findings across 11 consecutive years of internal audit and regulatory review at two banks, spanning FINMA, MAS and HKMA.</li>
+          <li>Advisory board member, Trust Valley Association, Geneva, since 2022.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="writing">
+  <div>
+    <h2>Writing</h2>
+    <p class="margin-note">Articles, contributions and columns from the last three years. More on <a href="https://www.linkedin.com/in/olivierbusolini" target="_blank" rel="noopener">LinkedIn</a>.</p>
+  </div>
+  <div class="body">
+    <ul class="rows">
+      <li><span class="when">22 Jul 2026</span><span class="what"><a href="https://enterpriseam.com/uae/2026/07/22/ai-can-flag-the-fraud-the-bank-still-has-to-own-the-call/" target="_blank" rel="noopener">AI can flag the fraud. The bank still has to own the call.</a><span class="where">Enterprise AM UAE</span></span></li>
+      <li><span class="when">Jul 2026</span><span class="what">Governing AI and agentic systems at enterprise scale<span class="where">Contributor, Palo Alto Networks eBook</span></span></li>
+      <li><span class="when">Jun 2026</span><span class="what">Global Perspectives from CISO and Cybersecurity Leaders<span class="where">Contributor, ZenData</span></span></li>
+      <li><span class="when">30 Apr 2026</span><span class="what">How Quantum Computing Is Redefining Financial Cybersecurity<span class="where">ITP.net</span></span></li>
+      <li><span class="when">3 Nov 2025</span><span class="what">From Personalisation to Protection: Why Does Privacy Matter More Now Than Ever?<span class="where">MEA Finance</span></span></li>
+      <li><span class="when">Oct 2025</span><span class="what">Contributor to the CybelAngel cybersecurity eBook</span></li>
+      <li><span class="when">Oct 2025</span><span class="what">Cybersecurity as the High-Performance Powertrain: From Brakes to Regenerative Risk Management<span class="where">LinkedIn</span></span></li>
+      <li><span class="when">Jun 2025</span><span class="what">From Crisis to Culture: The Evolution of the Strategic CISO<span class="where">LinkedIn</span></span></li>
+      <li><span class="when">Mar 2025</span><span class="what">Redefining the Role of CISOs: Embracing Agility and Resilience in an AI-Driven Business Era<span class="where">LinkedIn</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="speaking">
+  <div>
+    <h2>Speaking</h2>
+    <p class="margin-note">Conferences and panels from the last three years, most recent first. Teaching and recognition are listed in full.</p>
+  </div>
+  <div class="body">
+    <h3 class="group">Conferences and panels</h3>
+    <ul class="rows">
+      <li><span class="when">Aug 2026</span><span class="what"><strong>Future-Proofing Cybersecurity Forum</strong>, UAE Cyber Security Council with Gartner<span class="where">Panellist with Adrian Hall, Gartner, on cybersecurity resilience lessons for UAE government and public-sector CISOs</span></span></li>
+      <li><span class="when">2026</span><span class="what"><strong>GISEC Global 2026</strong>, Dubai<span class="where">Panellist, "Cyber Resilience and Business-Aligned Security Strategy"</span></span></li>
+      <li><span class="when">Sep 2025</span><span class="what"><strong>e-Crime &amp; Cybersecurity Congress</strong>, Abu Dhabi<span class="where">Speaker, "Embracing Agility and Resilience"</span></span></li>
+      <li><span class="when">2025</span><span class="what"><strong>Gartner Security &amp; Risk Management Summit</strong>, London<span class="where">Case study, "The Evolving CISO: Agility and Resilience in Practice"</span></span></li>
+      <li><span class="when">2025</span><span class="what"><strong>Finnovex Middle East</strong>, Dubai<span class="where">Speaker, "Balancing Innovation with Security: Strategy, Risk Appetite, and Trust"</span></span></li>
+      <li><span class="when">6–8 May 2025</span><span class="what"><strong>GISEC Global 2025</strong>, Dubai World Trade Centre<span class="where">Banking Track, "Securing the Financial Sector in an Era of Emerging Threats"</span></span></li>
+      <li><span class="when">25 Jun 2024</span><span class="what"><strong>Infosec &amp; Cybersecurity Congress</strong>, Dubai<span class="where">Panellist on aligning cybersecurity initiatives with board priorities, ISACA UAE Chapter and TahawulTech</span></span></li>
+      <li><span class="when">2023–2024</span><span class="what"><strong>GISEC Global</strong>, Dubai<span class="where">"Cyber Risk, Resilience, and Board Engagement"</span></span></li>
+      <li><span class="when">28 Nov 2023</span><span class="what"><strong>Middle East CISO Executive Summit</strong>, Evanta, Riyadh<span class="where">Breakout speaker, "Creating a Secure by Design Mindset to Accelerate Cloud Transformation"</span></span></li>
+      <li><span class="when">2022–2025</span><span class="what"><strong>IDC Middle East Cybersecurity Summit</strong><span class="where">Panellist, "Enterprise Security Transformation in Financial Services"</span></span></li>
+      <li><span class="when">2019–2026</span><span class="what"><strong>Zero-Day Conference</strong>, Geneva<span class="where">"Vulnerability Management and Zero-Day Risk"</span></span></li>
+      <li><span class="when">2020–2025</span><span class="what"><strong>Trust Valley ecosystem events</strong>, Geneva and Lausanne<span class="where">"Digital Trust and Security Governance"</span></span></li>
+      <li><span class="when">2018–2026</span><span class="what"><strong>Closed-door banking forums</strong>, UAE and Switzerland<span class="where">Keynote and moderator, "Regulatory Risk and Financial Cyber Resilience"</span></span></li>
+    </ul>
+
+
+    <h3 class="group">Teaching</h3>
+    <ul class="rows">
+      <li><span class="when">2008</span><span class="what">Guest lecturer, Haute École de Gestion de Genève<span class="where">MBA and MSSI programme</span></span></li>
+      <li><span class="when">2007</span><span class="what">Guest lecturer, Université de Lausanne<span class="where">IMATIS programme</span></span></li>
+    </ul>
+
+    <h3 class="group">Recognition</h3>
+    <ul class="rows">
+      <li><span class="when">2025</span><span class="what">CISO of the Year, Finnovex Middle East<span class="where">Named in the event press release of 13 November 2025</span></span></li>
+      <li><span class="when">2025</span><span class="what">Selected by Gartner as a case study in CISO role evolution<span class="where">Security &amp; Risk Management Summit, London</span></span></li>
+      <li><span class="when">2024</span><span class="what">CISO Infosec &amp; Cyber Risk Leadership Award<span class="where">ISACA UAE Chapter and TahawulTech</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="media">
+  <div>
+    <h2>Media</h2>
+    <p class="margin-note">Interviews, podcasts and video.</p>
+  </div>
+  <div class="body">
+    <ul class="rows">
+      <li><span class="when">22 Jul 2026</span><span class="what"><a href="https://enterpriseam.com/uae/2026/07/22/ai-can-flag-the-fraud-the-bank-still-has-to-own-the-call/" target="_blank" rel="noopener">AI can flag the fraud. The bank still has to own the call.</a><span class="where">Enterprise AM UAE, article</span></span></li>
+      <li><span class="when">10 Jun 2026</span><span class="what">Why cyber resilience is now a non-negotiable fixed cost for the banking sector in MENA+<span class="where">Enterprise AM MENA+, interview</span></span></li>
+      <li><span class="when">7 Nov 2025</span><span class="what">From Personalisation to Protection<span class="where">Mashreq, video (YouTube)</span></span></li>
+      <li><span class="when">5 Nov 2025</span><span class="what"><a href="https://www.infosecurity-magazine.com/interviews/mashreq-banks-ciso-cybersecurity" target="_blank" rel="noopener">From IT to Influence: Mashreq Bank's CISO on Redefining Cybersecurity Leadership</a><span class="where">Infosecurity Magazine, interview by James Coker</span></span></li>
+      <li><span class="when">7 Jul 2025</span><span class="what">How to Build a Security Team That Actually Enables the Business<span class="where">The Connectivity Cloud Podcast, Cloudflare, hosted by Mark Dembo</span></span></li>
+      <li><span class="when">Jul 2025</span><span class="what">What Makes a Successful CISO Journey<span class="where">The Cyber Learning Circle, podcast</span></span></li>
+      <li><span class="when">27 Mar 2025</span><span class="what">Fraud Unmasked: Cyber Threats, AI &amp; How to Stay Protected<span class="where">Mashreq NEO (YouTube and Facebook)</span></span></li>
+      <li><span class="when">2025</span><span class="what">In Conversation with Olivier Busolini<span class="where">GISEC Dubai, video series</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div>
+    <h2>Contact</h2>
+    <p class="margin-note">For consulting, speaking and the newsletter.</p>
+  </div>
+  <div class="body">
+    <div class="contact-line">
+      <span class="addr" id="addr">Infosec@busolini.fr</span>
+      <button class="copy" id="copy" type="button">Copy address</button>
+      <a class="btn ghost" href="mailto:Infosec@busolini.fr">Write an email</a>
+    </div>
+    <p style="margin-top:18px">Each assessment starts with a conversation of about an hour. If an assessment is not worth your time, I will say so.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© Olivier Busolini 2026. No reuse without permission.</p>
+  <p>The views on this page are my own. They are not those of my employer.</p>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var addr = document.getElementById('addr');
+  if (!btn || !addr) return;
+  btn.addEventListener('click', function () {
+    var text = addr.textContent.trim();
+    function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy address'; }, 1800); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(addr);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Press Ctrl+C or Cmd+C';
+    }
+    try {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
