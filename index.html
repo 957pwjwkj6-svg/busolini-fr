@@ -113,6 +113,10 @@ p { margin: 0 0 1em; max-width: 40em; }
 h3.group { font-family: var(--font-head); font-weight: 600; font-size: 1.3rem; margin: 34px 0 14px; }
 h3.group:first-child { margin-top: 0; }
 
+.about { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: 28px 40px; align-items: start; }
+.about img { display: block; width: 100%; height: auto; border-radius: 2px; }
+.about .bio p { max-width: 38em; }
+
 .contact-line { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; }
 .addr { font-family: var(--font-head); font-size: 1.8rem; font-weight: 500; user-select: all; overflow-wrap: anywhere; }
 .copy { font: inherit; font-size: 0.9rem; font-weight: 600; background: transparent; color: var(--link); border: 1px solid var(--rule); border-radius: 2px; padding: 7px 14px; cursor: pointer; }
@@ -124,6 +128,8 @@ footer p { margin: 0; max-width: none; }
 @media (max-width: 760px) {
   section { grid-template-columns: minmax(0, 1fr); padding-block: 34px; }
   .rows li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .about { grid-template-columns: minmax(0, 1fr); }
+  .about img { max-width: 320px; }
   .hero-text { padding-bottom: 36px; }
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -147,6 +153,7 @@ footer p { margin: 0; max-width: none; }
       <a href="#writing">Writing</a>
       <a href="#speaking">Speaking</a>
       <a href="#media">Media</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
     <blockquote>The future is digital, and its foundation is trust. Security is the precursor of trust.</blockquote>
@@ -353,6 +360,21 @@ footer p { margin: 0; max-width: none; }
       <li><span class="when">27 Mar 2025</span><span class="what">Fraud Unmasked: Cyber Threats, AI &amp; How to Stay Protected<span class="where">Mashreq NEO (YouTube and Facebook)</span></span></li>
       <li><span class="when">2025</span><span class="what">In Conversation with Olivier Busolini<span class="where">GISEC Dubai, video series</span></span></li>
     </ul>
+  </div>
+</section>
+
+<section id="about">
+  <div>
+    <h2>About</h2>
+    <p class="margin-note">The short version of the career.</p>
+  </div>
+  <div class="body about">
+    <img src="Olivier%20Busolini%20speaking.jpg" width="925" height="1053" alt="Olivier Busolini speaking with a microphone at a conference" loading="lazy">
+    <div class="bio">
+      <p>I am Global Head of Information Security (CISO) at a bank in the Middle East, reporting to the Chief Risk Officer, with direct access to the CEO and functional reporting to the board risk committee. I have spent more than 35 years in professional life and more than 25 in cybersecurity leadership, across Tier-1 banks in France, Switzerland and the Gulf, after an early career at the French Ministry of Defence and ANSSI, France's national cybersecurity agency.</p>
+      <p>I work from one thesis: cyber resilience is a competitive advantage, and security investment is a business enabler, not a cost centre. At my current bank I secured board validation of a five-year strategy that doubled annual operating expenditure to $20M and scaled the security organisation to 85 FTE. I also defined its AI risk management framework, which governs more than 50 AI models.</p>
+      <p>I have operated under four supervisory authorities and kept zero adverse audit findings across 11 consecutive years of review at two banks. Gartner selected my work as a case study in CISO role evolution (London, 2025), and the ISACA UAE Chapter gave me its CISO Infosec and Cyber Risk Leadership Award in 2024. I am working towards non-executive director roles.</p>
+    </div>
   </div>
 </section>
 
