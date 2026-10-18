@@ -73,13 +73,14 @@ h3.group:first-child{margin-top:0}
 .about{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:28px 40px;align-items:start}
 .about img{display:block;width:100%;height:auto;border-radius:14px}
 .about .bio p{max-width:38em}
+.about .band{grid-column:1/-1;display:grid;grid-template-columns:1.7fr 1fr .9fr;gap:12px;margin-top:8px}.about .band img{width:100%;height:240px;object-fit:cover;border-radius:12px}.about .band .tall{object-position:50% 72%}
 .contact-line{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px}
 .addr{font-family:var(--font-head);font-size:2rem;font-weight:500;color:var(--deep);user-select:all;overflow-wrap:anywhere}
 .copy{font:inherit;font-size:.9rem;font-weight:600;background:transparent;color:var(--navy);border:1px solid var(--sky);border-radius:999px;padding:8px 16px;cursor:pointer}
 .copy:hover{border-color:var(--navy)}
 footer{max-width:1120px;margin:0 auto;padding:28px 24px 56px;border-top:1px solid var(--mist);color:var(--muted);font-size:.88rem;display:grid;gap:4px}
 footer p{margin:0;max-width:none}
-@media(max-width:860px){html{scroll-padding-top:96px}.top-in{flex-direction:column;align-items:flex-start;height:auto;gap:2px;padding:10px 24px 6px}.top nav{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;width:100%;gap:20px;padding:4px 0 8px;scrollbar-width:none}.top nav::-webkit-scrollbar{display:none}.top nav a{white-space:nowrap;font-size:.95rem}.hero-in{grid-template-columns:minmax(0,1fr);gap:36px;padding:40px 24px 48px}.hero-img{order:-1;height:260px}section{grid-template-columns:minmax(0,1fr);padding-block:48px}.cards{grid-template-columns:minmax(0,1fr)}.rows li{grid-template-columns:minmax(0,1fr);gap:2px}.about{grid-template-columns:minmax(0,1fr)}.about img{max-width:320px}}
+@media(max-width:860px){html{scroll-padding-top:96px}.top-in{flex-direction:column;align-items:flex-start;height:auto;gap:2px;padding:10px 24px 6px}.top nav{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;width:100%;gap:20px;padding:4px 0 8px;scrollbar-width:none}.top nav::-webkit-scrollbar{display:none}.top nav a{white-space:nowrap;font-size:.95rem}.hero-in{grid-template-columns:minmax(0,1fr);gap:36px;padding:40px 24px 48px}.hero-img{order:-1;height:260px}section{grid-template-columns:minmax(0,1fr);padding-block:48px}.cards{grid-template-columns:minmax(0,1fr)}.rows li{grid-template-columns:minmax(0,1fr);gap:2px}.about{grid-template-columns:minmax(0,1fr)}.about img{max-width:320px}.about .band{grid-template-columns:1fr 1fr}.about .band img{max-width:none;height:190px}.about .band .wide{grid-column:1/-1;height:auto;aspect-ratio:5/3}}
 </style>
 
 </head>
@@ -307,12 +308,17 @@ footer p{margin:0;max-width:none}
     <p class="margin-note">The short version of the career.</p>
   </div>
   <div class="body about">
-    <img src="Olivier%20Busolini%20speaking.jpg" width="925" height="1053" alt="Olivier Busolini speaking with a microphone at a conference" loading="lazy">
+    <img src="olivier-gisec-2025-startups.jpg" width="800" height="802" alt="Olivier Busolini speaking with a microphone at GISEC Global 2025" loading="lazy">
     <div class="bio">
       <p>I am Global Head of Information Security (CISO) at a bank in the Middle East, reporting to the Chief Risk Officer, with direct access to the CEO and functional reporting to the board risk committee. I have spent more than 35 years in professional life and more than 25 in cybersecurity leadership, across Tier-1 banks in France, Switzerland and the Gulf, after an early career at the French Ministry of Defence and ANSSI, France's national cybersecurity agency.</p>
       <p>I work from one thesis: cyber resilience is a competitive advantage, and security investment is a business enabler, not a cost centre. At my current bank I secured board validation of a five-year strategy that doubled annual operating expenditure to $20M and scaled the security organisation to 85 FTE. I also defined its AI risk management framework, which governs more than 50 AI models.</p>
       <p>I have operated under four supervisory authorities and kept zero adverse audit findings across 11 consecutive years of review at two banks. Gartner selected my work as a case study in CISO role evolution (London, 2025), and the ISACA UAE Chapter gave me its CISO Infosec and Cyber Risk Leadership Award in 2024. I am working towards non-executive director roles.</p>
       <p>Connect with me on <a href="https://www.linkedin.com/in/olivierbusolini" target="_blank" rel="noopener">LinkedIn</a>.</p>
+    </div>
+    <div class="band">
+      <img class="wide" src="gisec-2025-panel.jpg" width="1200" height="719" alt="Panel discussion at GISEC Global 2025, with Olivier Busolini speaking" loading="lazy">
+      <img src="gisec-2025-panel-portrait.jpg" width="800" height="772" alt="Olivier Busolini speaking on a panel at GISEC Global 2025" loading="lazy">
+      <img class="tall" src="zurich-2024-panel.jpg" width="632" height="1223" alt="Olivier Busolini in conversation on stage at the Global Cyber Conference, Zurich" loading="lazy">
     </div>
   </div>
 </section>
